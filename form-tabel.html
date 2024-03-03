@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form tabel</title>
+    <style>
+        body {
+            background-color: #ccc;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        
+        }
+
+        .tombolawal{
+            position: absolute;
+            top: 45%;
+            left: 47%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100px;
+        }
+    
+        #tombol {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        cursor: pointer;
+        }
+
+        .kontainer1{
+        align-self: flex-start;
+        height: 100%;
+        width: auto;
+        margin: 80px 150px auto 150px;
+        padding: 30px;
+}
+        .kontainer2{
+        height: 100%;
+        width: auto;
+        margin: 80px 50px auto 50px;
+        padding: 30px;
+}
+
+        
+        #area_form{
+            position: relative;
+            width: 350px;
+            border: none;
+            border-radius: 10px;
+            padding: 30px 20px;
+            margin: 45px;
+        }
+        #table_area{
+            position: relative;
+            width: 500px;
+            border: none;
+            border-radius: 10px;
+            padding: 33px 20px 20px 20px;
+            margin-top: 45px;
+}
+        .judul{
+            padding-left: 25%;
+            position: relative;
+            align-self: center;
+         
+        }
+        .kontainer_tombol{
+            display: flex;
+            flex-direction: row;
+        }
+    
+        .tombol_input1 {
+            background: hwb(143 0% 0%);
+            color: rgb(0, 0, 0);
+            font: bold 16px calibri;
+            width: 50%;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 1px;
+        }
+
+            
+        .tombol_input2 {
+            background:red;
+            color: rgb(0, 0, 0);
+            font: bold 16px calibri;
+            width: 50%;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 1px;
+        }
+        
+
+        .input_form{
+            box-sizing:border-box;
+            width: 100%;
+            padding: 10px;
+            font-size: 11pt;
+            margin-bottom: 20px;
+            border-radius: 10px;
+}
+
+#outputTable{
+    margin: 10px;
+}
+
+
+    </style>
+</head>
+<body>
+    
+
+    
+    <div class="tombolawal">
+    <button onclick="jalan()" id="tombol">input data</button>
+    </div>
+
+    <div class="kontainer1">
+    <div id="area_form">
+
+    
+</div>
+</div>
+
+<div class="kontainer2">
+    <div id="table_area">
+
+</div>
+
+</div>
+    <script type="text/javascript">
+        function jalan(){
+            var diselement = document.getElementById("tombol");
+            diselement.parentElement.removeChild(diselement)
+
+            var div1 = document.getElementById("area_form");
+            div1.style.background='white'
+
+            var judulform = document.createElement("h1")
+            judulform.innerHTML = "FORM DATA"
+            judulform.className="judul"
+            div1.appendChild(judulform)
+
+            var isiform = document.createElement('form');
+            div1.appendChild(isiform)
+
+    
+            var labelnama = document.createElement("label");
+            labelnama.innerHTML= "Nama"
+            labelnama.className="label_form"
+            isiform.appendChild(labelnama)
+
+            var inputnama = document.createElement("input")
+            inputnama.type="text"
+            inputnama.id="namaval"
+            inputnama.className="input_form"
+            isiform.appendChild(inputnama)
+
+            var labeldate = document.createElement("label");
+            labeldate.innerHTML= "tanggal lahir"
+            labeldate.className="label_form"
+            isiform.appendChild(labeldate)
+
+            var inputdate = document.createElement("input")
+            inputdate.type="date"
+            inputdate.id="dateval"
+            inputdate.className="input_form"
+            isiform.appendChild(inputdate)
+            
+            var labelkota = document.createElement("label");
+            labelkota.innerHTML= "Kota"
+            labelkota.className="label_form"
+            isiform.appendChild(labelkota)
+
+            var inputkota = document.createElement("input")
+            inputkota.type="text"
+            inputkota.id="kotaval"
+            inputkota.className="input_form"
+            isiform.appendChild(inputkota)
+
+            var labelgender = document.createElement("label");
+            labelgender.innerHTML= "Gender"
+            labelgender.className="label_form"
+            isiform.appendChild(labelgender)
+
+            var inputgender = document.createElement("select")
+            inputgender.name="gender"
+            inputgender.id="genderval"
+            inputgender.className="input_form"
+            isiform.appendChild(inputgender)
+
+            var genderlk = document.createElement("option")
+            genderlk.value="Laki-laki"
+            genderlk.innerHTML="Laki-laki"
+            inputgender.appendChild(genderlk)
+
+            var genderpr = document.createElement("option")
+            genderpr.value="Perempuan"
+            genderpr.innerHTML="Perempuan"
+            inputgender.appendChild(genderpr)
+
+            var labelno = document.createElement("label");
+            labelno.innerHTML= "No Handphone"
+            labelno.className="label_form"
+            isiform.appendChild(labelno)
+
+            var inputno = document.createElement("input")
+            inputno.type="number"
+            inputno.id="noval"
+            inputno.className="input_form"
+            isiform.appendChild(inputno)
+
+            var labelmail = document.createElement("label");
+            labelmail.innerHTML= "E-mail"
+            labelmail.className="label_form"
+            isiform.appendChild(labelmail)
+
+            var inputmail = document.createElement("input")
+            inputmail.type="email"
+            inputmail.id="mailval"
+            inputmail.className="input_form"
+            isiform.appendChild(inputmail)
+
+            var tombol_form = document.createElement("div")
+            tombol_form.className="kontainer_tombol"
+            isiform.appendChild(tombol_form)
+
+            var inputsubmit = document.createElement("input")
+            inputsubmit.type="submit"
+            inputsubmit.className="tombol_input1"
+            inputsubmit.onclick= tabel_input
+            tombol_form.appendChild(inputsubmit)
+
+            var inputreset = document.createElement("input")
+            inputreset.type="reset"
+            inputreset.className="tombol_input2"
+            tombol_form.appendChild(inputreset)
+             
+            var div_table = document.getElementById("table_area")
+
+            var judultable = document.createElement("h1")
+            judultable.innerHTML = "TABLE DATA"
+            judultable.className="judul"
+            div_table.appendChild(judultable)
+
+            var addtable = document.createElement("table")
+            addtable.border ='1'
+            addtable.cellPadding='5'
+            addtable.id="outputTable"
+            addtable.align="center"
+
+            
+            div_table.appendChild(addtable)
+            div_table.style.background="white"
+
+            var addrowth = document.createElement("tr")
+            addtable.appendChild(addrowth)
+
+            var thnama = document.createElement("th")
+            thnama.innerHTML = "NAMA"
+            addrowth.appendChild(thnama)
+
+            var thdate = document.createElement("th")
+            thdate.innerHTML = "TANGGAL LAHIR"
+            addrowth.appendChild(thdate)
+
+            var thkota = document.createElement("th")
+            thkota.innerHTML = "KOTA"
+            addrowth.appendChild(thkota)
+
+            var thgender = document.createElement("th")
+            thgender.innerHTML = "GENDER"
+            addrowth.appendChild(thgender)
+
+            var thno = document.createElement("th")
+            thno.innerHTML = "No. HP"
+            addrowth.appendChild(thno)
+
+            var thmail = document.createElement("th")
+            thmail.innerHTML = "EMAIL"
+            addrowth.appendChild(thmail)
+
+       
+        }
+
+ 
+        document.getElementById("area_form").addEventListener("submit", function (event) {
+            event.preventDefault();
+        });
+
+
+        function tabel_input(){
+
+          
+
+            
+
+            
+            var namavalue = document.getElementById('namaval').value
+            var datevalue = document.getElementById('dateval').value
+            var kotavalue = document.getElementById('kotaval').value
+            var gendervalue = document.getElementById('genderval').value
+            var novalue = document.getElementById('noval').value
+            var mailvalue = document.getElementById('mailval').value
+
+            var newRow = document.createElement('tr')
+
+            var namacell = document.createElement("td")
+            namacell.textContent = namavalue;
+            newRow.appendChild(namacell)
+            
+            var datecell = document.createElement("td")
+            datecell.textContent = datevalue;
+            newRow.appendChild(datecell)
+
+            var kotacell = document.createElement("td")
+            kotacell.textContent = kotavalue;
+            newRow.appendChild(kotacell)
+
+            var gendercell = document.createElement("td")
+            gendercell.textContent = gendervalue;
+            newRow.appendChild(gendercell)
+
+            var nocell = document.createElement("td")
+            nocell.textContent = novalue;
+            newRow.appendChild(nocell)
+
+            var mailcell = document.createElement("td")
+            mailcell.textContent = mailvalue;
+            newRow.appendChild(mailcell)
+
+            var tabel = document.getElementById('outputTable')
+            tabel.appendChild(newRow)
+
+            document.getElementById('namaval').value=""
+            document.getElementById('dateval').value=""
+            document.getElementById('kotaval').value=""
+            document.getElementById('genderval').value=""
+            document.getElementById('noval').value=""
+            document.getElementById('mailval').value=""
+
+            
+        }
+      
+    </script>
+</body>
+</html>

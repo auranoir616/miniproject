@@ -1,0 +1,28 @@
+{
+  "transaksi": [
+    {
+      "date": "2023-09-07",
+      "transaksi": "saldo awal",
+      "pengeluaran": "",
+      "pemasukan": "150000",
+      "keterangan": "",
+      "id": 1694070060540
+    },
+    {
+      "date": "2023-09-07",
+      "transaksi": "uang makan",
+      "pengeluaran": "200000",
+      "pemasukan": "",
+      "keterangan": "",
+      "id": 1694070077124
+    },
+    {
+      "id": 1694070108409,
+      "date": "2023-09-08",
+      "transaksi": "",
+      "pengeluaran": "",
+      "pemasukan": "100000",
+      "keterangan": ""
+    }
+  ]
+}
